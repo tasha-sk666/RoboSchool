@@ -1,0 +1,46 @@
+.tooltip {
+  margin-left: 10px;
+
+  &__btn {
+    @include flex-all-center;
+
+    border-radius: 100%;
+    width: 24px;
+    height: 24px;
+    background-color: #14102414;
+
+    svg {
+      width: 4px;
+      height: 14px;
+    }
+
+    @include hover {
+      + .tooltip__txt {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &:focus {
+      + .tooltip__txt {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__txt {
+    border-radius: 5px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 8px #1410241a;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    text-align: center;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+}

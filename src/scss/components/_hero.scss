@@ -1,0 +1,94 @@
+.hero {
+  padding-top: 160px;
+  background-color: var(--dark-color);
+
+  &__container {
+    @include flex-v-center;
+
+    @include high-tablet {
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    min-width: 516px;
+
+    @include high-tablet {
+      min-width: unset;
+    }
+
+    @include high-tablet {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 50px;
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 160%;
+    text-transform: uppercase;
+    color: var(--light-color);
+
+    &-text {
+      display: block;
+      width: 90%;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 160%;
+      text-transform: initial;
+
+      @include high-tablet {
+        margin: 0 auto;
+        max-width: 560px;
+      }
+    }
+
+    @include high-tablet {
+      font-size: 46px;
+    }
+
+    @include mobile {
+      font-size: 36px;
+    }
+  }
+
+  &__image {
+    transform: translateX(100px);
+
+    @include high-tablet {
+      max-width: 560px;
+      max-height: 660px;
+      transform: translateX(0);
+    }
+
+    @include mobile {
+      max-width: 460px;
+      max-height: 560px;
+    }
+  }
+
+  &__link {
+    @include high-tablet {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      z-index: 2;
+      width: calc(100% - (var(--container-offset) * 2));
+      max-width: 420px;
+      transform: translateX(-50%);
+    }
+  }
+
+  @include high-tablet {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  @include mobile {
+    padding-bottom: 20px;
+  }
+}

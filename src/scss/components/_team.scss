@@ -1,0 +1,93 @@
+.team {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+  &__wrapper {
+    padding-left: max(var(--container-offset), calc((100% - var(--content-width)) / 2));
+  }
+
+  &__content {
+    margin-bottom: 75px;
+
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  .swiper-slide {
+    width: 360px;
+
+    @include small-tablet {
+      width: 260px;
+    }
+  }
+
+  &__image {
+    margin-bottom: 20px;
+    border-radius: 20px;
+    height: 500px;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 160%;
+    color: var(--dark-color);
+  }
+
+  &__post {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--text-color);
+  }
+
+  &__btn {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: var(--accent-color);
+  }
+
+  &__nav {
+    @include flex-all-sb;
+  }
+
+  &__scroll {
+    border-radius: 40px;
+    width: 360px;
+    height: 5px;
+    background-color: var(--gray-color);
+
+    @include small-tablet {
+      width: 100%;
+    }
+  }
+
+  &__slider-btn {
+    @include bg-cover;
+
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__slider-btn-prev {
+    background-image: url('../img/prev.svg');
+  }
+
+  &__slider-btn-next {
+    background-image: url('../img/next.svg');
+  }
+}

@@ -1,0 +1,71 @@
+.order {
+  @include image-set("../img/order-bg");
+
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-position: bottom center;
+  background-size: cover;
+  background-color: var(--accent-color);
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 40px;
+
+    @include high-tablet {
+      gap: 20px;
+    }
+  }
+
+  &__left {
+    grid-column: 6 span;
+    padding-left: 60px;
+
+    @include high-tablet {
+      padding-left: 0;
+    }
+
+    @include small-tablet {
+      text-align: center;
+      grid-column: 12 span;
+    }
+  }
+
+  &__right {
+    grid-column: 6 span;
+    padding-right: 60px;
+
+    @include high-tablet {
+      padding-right: 0;
+    }
+
+    @include small-tablet {
+      grid-column: 12 span;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 130%;
+    color: var(--light-color);
+
+    @include mobile {
+      font-size: 30px;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    color: var(--light-color);
+
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+}

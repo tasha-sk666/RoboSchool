@@ -1,0 +1,33 @@
+.section-title {
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 160%;
+  color: var(--dark-color);
+
+  @include small-tablet {
+    font-size: 38px;
+    line-height: 120%;
+  }
+
+  @include mobile {
+    font-size: 35px;
+    text-align: center;
+  }
+}
+
+.section-offset {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @include small-tablet {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.section-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: var(--text-color);
+}

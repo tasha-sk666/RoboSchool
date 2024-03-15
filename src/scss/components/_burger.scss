@@ -1,0 +1,54 @@
+.burger {
+  position: relative;
+  display: none;
+  border: 1px solid #ffffff14;
+  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+
+  &__line {
+    position: absolute;
+    left: 50%;
+    border-radius: 5px;
+    width: 26px;
+    height: 2px;
+    background-color: var(--light-color);
+    transform: translateX(-50%) translateY(-50%);
+
+    &:first-child {
+      margin-top: -7px;
+    }
+
+    &:last-child {
+      left: 15px;
+      margin-top: 7px;
+      width: 13px;
+      transform: translateX(-50%);
+    }
+  }
+
+  @include high-tablet {
+    display: block;
+  }
+}
+
+.burger-close {
+  @include bg-cover;
+
+  position: absolute;
+  right: var(--container-offset);
+  top: 30px;
+  z-index: 51;
+  display: none;
+  border: 1px solid #ffffff14;
+  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  background-image: url('../img/burger-close.svg');
+  background-position: center;
+  background-size: 14px 14px;
+
+  @include high-tablet {
+    display: block;
+  }
+}
